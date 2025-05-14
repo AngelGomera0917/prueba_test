@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      
+
   pull_request:
     branches:
       - master
@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: Darli CI
-      run: echo "Hola Darli"
+      run: clonar repo
 
     - name: Darli CD
       run: echo "Hola Mariela"
