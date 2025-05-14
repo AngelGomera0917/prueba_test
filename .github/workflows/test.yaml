@@ -1,0 +1,17 @@
+
+name: Ci / CD
+
+on: [push]
+
+jobs:
+    Gomera:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Darli CI
+            runs: clonar repositorio
+
+            - name: Darli CD
+            run: |
+                echo "Hola Mariela"
+
