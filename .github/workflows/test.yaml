@@ -29,6 +29,9 @@ jobs:
     - name: Dayi CI
       run: echo "Hola Dayelin"
 
+    - name: Checkout
+      uses: actions/checkout@v4.2.2
+
     - name: Diaz CD
       run: echo "Hola Diaz"
 
