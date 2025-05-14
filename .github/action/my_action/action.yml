@@ -1,0 +1,24 @@
+name: My Test Action
+description: My Test Action Today
+
+# Inputs
+inputs:
+  message:
+    description: 'The message to print'
+    required: true
+    default: 'default value'
+
+  message2:
+    description: 'The message to print 2'
+    required: false
+    default: 'default value2'
+
+runs:
+  using: 'composite'
+  
+  steps:
+    - name: Print message
+      shell: bash
+      run: |
+        echo "Message: ${{ inputs.message }}"
+        echo "Message2: ${{ inputs.message2 }}"
