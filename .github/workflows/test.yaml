@@ -8,7 +8,7 @@ jobs:
 
     steps:
     - name: Darli CI
-      run: clonar repositorio
+      run: echo "Hola Darli"
 
     - name: Darli CD
       run: echo "Hola Mariela"
