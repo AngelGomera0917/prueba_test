@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-
+      
   pull_request:
     branches:
       - master
@@ -15,12 +15,13 @@ jobs:
 
     steps:
     - name: Darli CI
-      run: clonar repo
+      run: echo "Hola Darli"
 
     - name: Darli CD
       run: echo "Hola Mariela"
 
   Romero:
+    needs: Gomera
     runs-on: ubuntu-latest
 
     steps:
