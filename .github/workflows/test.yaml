@@ -12,6 +12,5 @@ jobs:
         runs: clonar repositorio
 
         - name: Darli CD
-        run: |
-            echo "Hola Mariela"
+        run: echo "Hola Mariela"
 
