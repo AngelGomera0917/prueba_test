@@ -13,4 +13,14 @@ jobs:
     - name: Darli CD
       run: echo "Hola Mariela"
 
+  Romero:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Dayi CI
+      run: echo "Hola Dayelin"
+
+    - name: Diaz CD
+      run: echo "Hola Diaz"
+
 
