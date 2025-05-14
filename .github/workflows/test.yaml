@@ -35,4 +35,10 @@ jobs:
     - name: Diaz CD
       run: echo "Hola Diaz"
 
+    - name: Python
+      uses: actions/setup-python@v4.2.2
+      with:
+        python-version: latest 
+
+
 
