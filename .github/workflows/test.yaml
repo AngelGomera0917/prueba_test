@@ -11,6 +11,7 @@ on:
 
 jobs:
   Gomera:
+    name: Integracion Continua
     runs-on: ubuntu-latest
 
     steps:
