@@ -2,16 +2,16 @@ name: My Test Action
 description: My Test Action CI-CD
 
 # Inputs
-inputs:
-  message:
-    description: 'The message to print'
-    required: true
-    default: 'default value'
+# inputs:
+#   message:
+#     description: 'The message to print'
+#     required: true
+#     default: 'default value'
 
-  message2:
-    description: 'The message to print 2'
-    required: false
-    default: 'default value2'
+#   message2:
+#     description: 'The message to print 2'
+#     required: false
+#     default: 'default value2'
 
 runs:
   using: 'composite'
@@ -19,6 +19,6 @@ runs:
   steps:
     - name: Print messages
       shell: bash
-      run: |
-        echo "Message: ${{ inputs.message }}!"
-        echo "Message2: ${{ inputs.message2 }}!"
+      run: echo "Eres increible Darli"
+        # echo "Message: ${{ inputs.message }}!"
+        # echo "Message2: ${{ inputs.message2 }}!"
