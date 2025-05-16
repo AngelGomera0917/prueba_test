@@ -112,11 +112,10 @@ jobs:
     needs: Variables_Entorno
     runs-on: ubuntu-latest
 
-    env:
-      my_var: " Los mejores desarrolladores de software, son los que verdaderamente disfrutan mas con lo que hacen "
-
     steps:
       - name: " Imprimir variable de entorno 2 "
+        env:
+          my_var: " Los mejores desarrolladores de software, son los que verdaderamente disfrutan mas   con lo que hacen "
         run: echo " $my_var "
 
 
