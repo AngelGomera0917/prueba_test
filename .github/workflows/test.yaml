@@ -60,6 +60,37 @@ jobs:
           Full_Stack: ' Voy a ser ingeniero Full Stack Dios Mediante 🙌 '
           Python: ' Me gusta la programacion en Python 👨🏽‍💻 '
 
+  install_services:
+    name: Install Serviuces
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:5.7
+        ports:
+          - 3306:3306
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: test_db
+        options: >-
+          --health-cmd "mysqladmin ping -h localhost"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 3
+
+      redis:
+        image: redis:latest
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 3
+
+    steps:
+      - name: Test MySQL
+        run: dir
 
 
 
