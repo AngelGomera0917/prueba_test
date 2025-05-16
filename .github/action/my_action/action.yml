@@ -5,20 +5,22 @@ description: My Test Action CI-CD
 # Inputs
 
 inputs:
-  message:
-    description: 'The message to print'
-    required: true
-    default: 'default value'
+  DevOps:
+    description: ' Aqui explico que me gusta DevOps y la nube '
+    required: true  # Cuando lo pones en true, es obligatorio colocar valor en el workflow
+    default: ' DevOps y la nube '
 
-  message2:
-    description: 'The message to print 2'
-    required: false
-    default: 'default value2'
+  Full_Stack:
+    description: ' Aqui explico que voy a ser ingeniero Full Stack '
+    required: false # Cuando lo pones en false, no es obligatorio colocar valor en el workflow
+    # Si no se pone el valor, se toma el default
+    default: ' Full Stack '
 
-  message3:
-    description: 'The message to print 3'
-    required: false
-    default: 'default value3'
+  Python:
+    description: ' Aqui explico que me gusta la programacion en Python '
+    required: false # Cuando lo pones en false, no es obligatorio colocar valor en el workflow
+    # Si no se pone el valor, se toma el default
+    default: ' programacion en Python '
 
 runs:
   using: 'composite'
@@ -27,6 +29,6 @@ runs:
     - name: Print messages
       shell: bash
       run: |
-        echo "Message: ${{ inputs.message }}!"
-        echo "Message2: ${{ inputs.message2 }}!"
-        echo "Message3: ${{ inputs.message3 }}!"
+        echo " ${{ inputs.DevOps }}! "
+        echo " ${{ inputs.Full_Stack }}! "
+        echo " ${{ inputs.Python }}! "
