@@ -61,7 +61,7 @@ jobs:
           Python: ' Me gusta la programacion en Python 👨🏽‍💻 '
 
   install_services:
-    name: Install Serviuces
+    name: Install Services
     runs-on: ubuntu-latest
 
     services:
@@ -90,7 +90,9 @@ jobs:
 
     steps:
       - name: Test MySQL
-        run: dir
+        run: |
+          echo "Testing MySQL connection..."
+          until mysql -h
 
 
 
