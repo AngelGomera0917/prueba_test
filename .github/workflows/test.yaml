@@ -116,7 +116,7 @@ jobs:
       - name: " Imprimir variable de entorno 2 "
         env:
           my_var: " Los mejores desarrolladores de software, son los que verdaderamente disfrutan mas   con lo que hacen "
-        run: echo " $my_var "
+        run: echo " $my_var " # Esta variable se coloca en el repositorio, pero no se ve porque es secreta
 
 
   Variable_Remota:
@@ -126,5 +126,15 @@ jobs:
 
     steps:
       - name: " Imprimir Variable de Entorno Remota "
-        run: echo " ${{ vars.MY_VAR_REMOTA }} "
+        run: echo " ${{ vars.MY_VAR_REMOTA }} " # Esta variable se coloca en el repositorio, pero no se ve porque es secreta
+
+
+  Secret:
+    name:  Secrets_Key
+    needs: Variable_Remota
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: " Imprimir My Secrets "
+        run: echo " ${{ secrets.MY_SECRETS }} " # Este es el secreto que se coloca en el repositorio, pero no se ve porque es secreto
 
