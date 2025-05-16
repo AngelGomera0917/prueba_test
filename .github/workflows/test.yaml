@@ -94,8 +94,8 @@ jobs:
         run: dir
 
 
-  Variables_Entorno:
-    name: Variables de Entorno
+  Variable_Entorno:
+    name: Variable de Entorno
     needs: install_services
     runs-on: ubuntu-latest
 
@@ -107,9 +107,9 @@ jobs:
         run: echo " $my_env "
 
 
-  Variables_Entorno_2:
-    name: Variables de Entorno 2
-    needs: Variables_Entorno
+  Variable_Entorno_2:
+    name: Variable de Entorno 2
+    needs: Variable_Entorno
     runs-on: ubuntu-latest
 
     steps:
@@ -119,5 +119,12 @@ jobs:
         run: echo " $my_var "
 
 
+  Variable_Remota:
+    name: Variable de Entorno Remota
+    needs: Variable_Entorno_2
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: " Imprimir Variable de Entorno Remota "
+        run: echo " ${{ vars.MY_VAR_REMOTA }} "
 
