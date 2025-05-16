@@ -48,9 +48,9 @@ jobs:
     - name: dir
       uses: ./.github/action/my_action
       with:
-        message: ' Me gusta DevOps'
-        message2: ' Voy a ser ingeniero Full Stack'
-        message3: ' Me gusta la programacion'
+        DevOps: ' Me gusta DevOps y la nube ☁ '
+        Full_Stack: ' Voy a ser ingeniero Full Stack Dios Mediante 🙌 '
+        Python: ' Me gusta la programacion en Python 👨🏽‍💻 '
 
 
 
