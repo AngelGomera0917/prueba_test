@@ -47,9 +47,10 @@ jobs:
 
     - name: dir
       uses: ./.github/action/my_action
-      # with:
-      #   message: 'Hello world'
-      #   message2: 'Hello world 2'
+      with:
+        message: ' Me gusta DevOps'
+        message2: ' Voy a ser ingeniero Full Stack'
+        message3: ' Me gusta la programacion'
 
 
 
