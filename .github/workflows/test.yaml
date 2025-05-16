@@ -10,47 +10,55 @@ on:
       - master
 
 jobs:
-  Gomera:
+  Prueba_CI:
     name: Integracion Continua
     runs-on: ubuntu-latest
 
     steps:
     - name: Darli CI
-      run: echo "Hola Darli"
+      run: echo " Hola Darli "
 
-    - name: Darli CD
-      run: echo "Hola Mariela"
+    - name: Gomera CI
+      run: echo " Hola Gomera "
 
-  Romero:
+  Prueba_CD:
     name: Despliegue Contínuo
-    needs: Gomera
+    needs: Prueba_CI
     runs-on: ubuntu-latest
 
     steps:
-    - name: Dayi CI
-      run: echo "Hola Dayelin"
+    - name: Dayi CD
+      run: echo " Hola Dayelin "
 
     - name: Checkout
       uses: actions/checkout@v4.2.2
 
     - name: Diaz CD
-      run: echo "Hola Diaz"
+      run: echo " Hola Diaz "
 
     - name: Setup Python
       uses: actions/setup-python@v5.6.0
       with:
         python-version: "3.11"
 
-
     - name: Version Python
       run: python --version
 
-    - name: dir
-      uses: ./.github/action/my_action
-      with:
-        DevOps: ' Me gusta DevOps y la nube ☁ '
-        Full_Stack: ' Voy a ser ingeniero Full Stack Dios Mediante 🙌 '
-        Python: ' Me gusta la programacion en Python 👨🏽‍💻 '
+  Prueba_Action:
+    name: Prueba de Action
+    needs: Prueba_CD
+    runs-on: ubuntu-latest
+
+    steps:
+      # - name: Checkout
+      #   uses: actions/checkout@v4.2.2
+
+      - name: dir
+        uses: ./.github/action/my_action
+        with:
+          DevOps: ' Me gusta DevOps y la nube ☁ '
+          Full_Stack: ' Voy a ser ingeniero Full Stack Dios Mediante 🙌 '
+          Python: ' Me gusta la programacion en Python 👨🏽‍💻 '
 
 
 
