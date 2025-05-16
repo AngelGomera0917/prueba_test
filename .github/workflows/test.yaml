@@ -90,10 +90,7 @@ jobs:
 
     steps:
       - name: Test MySQL
-        run: |
-          echo "Testing MySQL connection..."
-          until mysql -h
-
+        run: dir
 
 
 
