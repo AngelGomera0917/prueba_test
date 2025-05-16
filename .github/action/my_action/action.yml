@@ -1,5 +1,5 @@
 name: My Test Action
-description: My Test Action Today
+description: My Test Action CI-CD
 
 # Inputs
 inputs:
@@ -17,8 +17,8 @@ runs:
   using: 'composite'
   
   steps:
-    - name: Print message
+    - name: Print messages
       shell: bash
       run: |
-        echo "Message: ${{ inputs.message }}"
-        echo "Message2: ${{ inputs.message2 }}"
+        echo "Message: ${{ inputs.message }}!
+        echo "Message2: ${{ inputs.message2 }}!"
