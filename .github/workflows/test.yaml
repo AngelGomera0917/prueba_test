@@ -22,6 +22,7 @@ jobs:
       run: echo "Hola Mariela"
 
   Romero:
+    name: Despliegue Contínuo
     needs: Gomera
     runs-on: ubuntu-latest
 
