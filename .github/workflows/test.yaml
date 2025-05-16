@@ -62,6 +62,7 @@ jobs:
 
   install_services:
     name: Install Services
+    needs: Prueba_Action
     runs-on: ubuntu-latest
 
     services:
@@ -91,6 +92,22 @@ jobs:
     steps:
       - name: Test MySQL
         run: dir
+
+
+  Variables_Entorno:
+    name: Variables de Entorno
+    needs: install_services
+    runs-on: ubuntu-latest
+
+    env:
+      my_env: " Si puedes imaginarlo, puedes programarlo "
+
+    steps:
+      - name: " Imprimir variable de entorno "
+        run: echo " $my_env "
+
+
+
 
 
 
