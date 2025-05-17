@@ -116,8 +116,7 @@ jobs:
       - name: " Imprimir variable de entorno 2 "
         env:
           my_var: " Los mejores desarrolladores de software, son los que verdaderamente disfrutan mas   con lo que hacen "
-        run: echo " $my_var " # Esta variable se coloca en el repositorio, pero no se ve porque es secreta
-
+        run: echo " $my_var " # Esta variable es visible en el repositorio.
 
   Variable_Remota:
     name: Variable de Entorno Remota
@@ -126,8 +125,7 @@ jobs:
 
     steps:
       - name: " Imprimir Variable de Entorno Remota "
-        run: echo " ${{ vars.MY_VAR_REMOTA }} " # Esta variable se coloca en el repositorio, pero no se ve porque es secreta
-
+        run: echo " ${{ vars.MY_VAR_REMOTA }} " # Esta variable es visible en el repositorio.
 
   Secret:
     name:  Secrets_Key
@@ -148,4 +146,4 @@ jobs:
         with:
           name: " artifacts "
           path: |
-            ./.github/action/my_action
+            ls -la ./.github/action/my_action
