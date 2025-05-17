@@ -148,4 +148,4 @@ jobs:
         with:
           name: " artifacts "
           path: |
-            ./.github/workflows/test.yaml
+            ./.github/action/my_action
