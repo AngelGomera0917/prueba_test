@@ -138,3 +138,14 @@ jobs:
       - name: " Imprimir My Secrets "
         run: echo " ${{ secrets.MY_SECRETS }} " # Este es el secreto que se coloca en el repositorio, pero no se ve porque es secreto
 
+  Artifactos:
+    name: Artifacts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: " Subir Artifacts "
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: " artifacts "
+          path: |
+            .github/workflows/test.yaml
