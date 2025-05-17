@@ -144,8 +144,8 @@ jobs:
 
     steps:
       - name: " Subir Artifacts "
-        uses: actions/upload-artifact@v3.1.0
+        uses: actions/upload-artifact@v4
         with:
           name: " artifacts "
           path: |
-            .github/workflows/test.yaml
+            ./.github/workflows/test.yaml
