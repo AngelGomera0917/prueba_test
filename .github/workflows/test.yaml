@@ -55,10 +55,10 @@ jobs:
 
       - name: dir
         uses: ./.github/action/my_action
-        with:
-          DevOps: ' Me gusta DevOps y la nube ☁ '
-          Full_Stack: ' Voy a ser ingeniero Full Stack Dios Mediante 🙌 '
-          Python: ' Me gusta la programacion en Python 👨🏽‍💻 '
+        # with:
+        #   DevOps: ' Me gusta DevOps y la nube ☁ '
+        #   Full_Stack: ' Voy a ser ingeniero Full Stack Dios Mediante 🙌 '
+        #   Python: ' Me gusta la programacion en Python 👨🏽‍💻 '
 
   install_services:
     name: Install Services
