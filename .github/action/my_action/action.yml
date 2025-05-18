@@ -2,25 +2,25 @@ name: My Test Action
 
 description: My Test Action CI-CD
 
-# # Inputs
+# Inputs
 
-# inputs:
-#   DevOps:
-#     description: ' Aqui explico que me gusta DevOps y la nube '
-#     required: true  # Cuando lo pones en true, es obligatorio colocar valor en el workflow
-#     default: ' DevOps y la nube '
+inputs:
+  DevOps:
+    description: ' Aqui explico que me gusta DevOps y la nube '
+    required: true  # Cuando lo pones en true, es obligatorio colocar valor en el workflow
+    default: ' DevOps y la nube '
 
-#   Full_Stack:
-#     description: ' Aqui explico que voy a ser ingeniero Full Stack '
-#     required: false # Cuando lo pones en false, no es obligatorio colocar valor en el workflow
-#     # Si no se pone el valor, se toma el default
-#     default: ' Full Stack '
+  Full_Stack:
+    description: ' Aqui explico que voy a ser ingeniero Full Stack '
+    required: false # Cuando lo pones en false, no es obligatorio colocar valor en el workflow
+    # Si no se pone el valor, se toma el default
+    default: ' Full Stack '
 
-#   Python:
-#     description: ' Aqui explico que me gusta la programacion en Python '
-#     required: false # Cuando lo pones en false, no es obligatorio colocar valor en el workflow
-#     # Si no se pone el valor, se toma el default
-#     default: ' programacion en Python '
+  Python:
+    description: ' Aqui explico que me gusta la programacion en Python '
+    required: false # Cuando lo pones en false, no es obligatorio colocar valor en el workflow
+    # Si no se pone el valor, se toma el default
+    default: ' programacion en Python '
 
 runs:
   using: 'composite'
@@ -28,7 +28,7 @@ runs:
   steps:
     - name: Print messages
       shell: bash
-      run: echo "Hola Mundo"
-        # echo " ${{ inputs.DevOps }}! "
-        # echo " ${{ inputs.Full_Stack }}! "
-        # echo " ${{ inputs.Python }}! "
+      run: |
+        echo " ${{ inputs.DevOps }}! "
+        echo " ${{ inputs.Full_Stack }}! "
+        echo " ${{ inputs.Python }}! "
