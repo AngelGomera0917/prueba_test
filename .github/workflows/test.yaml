@@ -1,13 +1,13 @@
 name: Ci / CD
 
-on:
-  push:
-    branches:
-      - master
+on: workflow_dispatch
+  # push:
+  #   branches:
+  #     - master
       
-  pull_request:
-    branches:
-      - master
+  # pull_request:
+  #   branches:
+  #     - master
 
 jobs:
   Prueba_CI:
